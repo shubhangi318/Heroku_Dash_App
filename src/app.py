@@ -401,7 +401,7 @@ def update_bar_chart(contents, filename,dropdown1,dropdown2):
             df3 = df2['Active'].value_counts().reset_index()
 
             fig = px.pie(df3, values='Active', names='index', title='Pie Chart')
-    return fig
+        return fig
 
 
 @app.callback(
@@ -460,7 +460,7 @@ def update_bar_chart2(contents, filename,dropdown6,dropdown7,dropdown8):
             # df4 = df3[dropdown8]
             
             fig = px.line(df3,x="Week", y=dropdown8,markers=True)
-    return fig
+        return fig
 
 
 @app.callback(
@@ -482,7 +482,7 @@ def update_bar_chart3(contents, filename,dropdown9):
             fig = px.bar(df3, x="Age_Group", y=dropdown9, 
                  color="Gender", barmode="group")
             
-    return fig
+        return fig
 
 
 if __name__ == '__main__':
